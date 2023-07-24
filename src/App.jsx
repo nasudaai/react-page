@@ -18,9 +18,14 @@ const peoples = [
 
 export default function App() {
   const [index, setIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false);
 
   function handleClick() {
     setIndex(index + 1);
+  }
+
+  function handleMoreClick() {
+    setShowMore(!showMore);
   }
   
   let people = peoples[index];
@@ -35,6 +40,10 @@ export default function App() {
       <ul>
         <li>{people.lines}</li>
       </ul>
+      <button onClick={handleMoreClick}>
+        {showMore ? people.name : people.name} details
+      </button>
+      {showMore && <p>{people.lines}</p>}
     </div>
   )
 }
