@@ -41,9 +41,13 @@ export default function App() {
         <li>{people.lines}</li>
       </ul>
       <button onClick={handleMoreClick}>
-        {showMore ? people.name : people.name} details
+        {showMore ? people.name : 'showmore?'} details
       </button>
-      {showMore && <p>{people.lines}</p>}
+      {showMore && <div>
+        <p>{people.name}</p>
+        <p>{people.lines}</p>
+        </div>
+      }
     </div>
   )
 }
