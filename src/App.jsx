@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Counter from './components/counter';
 
 const peoples = [
   {
@@ -35,6 +36,7 @@ export default function App() {
       <button onClick={handleClick}>
         next
       </button>
+      <Counter />
       <h1>peoples</h1>
       <h2><i>No: {index + 1} </i> {people.name}</h2>
       <ul>
